@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --content-primary: #ffffff;
+  --content-secondary: #c7c9cc;
+  --content-tertiary: #d9d9d9;
+  --content-brand: #c58de7;
+  --color-inverse: #030203;
+
+  --background-primary: #020202;
+  --background-secondary: #111012;
+  --background-tertiary: #24222e;
+  --background-brand: #c58de7;
+  --background-gray: #3d3d3d;
+
+  --accent-pink: #d586e0;
+  --accent-blue: #91a1fa;
+  --accent-green: #77c0af;
+  --accent-lime: #d1dc97;
+  --accent-red: #e9a9b3;
+
+  --gradient-border: linear-gradient(
+    to right,
+    var(--accent-green) 0%,
+    var(--accent-lime) 14.84%,
+    var(--accent-red) 32.15%,
+    var(--accent-pink) 65.79%,
+    var(--accent-blue) 84.58%
+  );
+
+  --gradient-background: linear-gradient(
+    to right,
+    var(--accent-pink) 0%,
+    var(--accent-blue) 98.93%
+  );
+
+  --gradient-content: linear-gradient(
+    to right,
+    var(--content-secondary) 0%,
+    var(--background-gray) 100%
+  );
+
+  --ff-sora: "Sora", sans-serif;
+  --ff-roboto-mono: "Roboto Mono", monospace;
+  --ff-roboto-flex: "Roboto Flex", sans-serif;
+
+  --fw-extra: 800;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  --fs-display-lg: 4.5rem;
+  --fs-display-md: 2.5rem;
+  --fs-display-sm: 2rem;
+
+  --fs-overline: 1rem;
+
+  --fs-pg-lg: 1rem;
+  --fs-pg-md: 0.875rem;
+  --fs-pg-sm: 0.75rem;
+  --fs-label-md: 1.25rem;
+  --fs-label-sm: 1rem;
+
+  --display-lg: var(--fw-extra) var(--fs-display-lg) / 130% var(--ff-sora);
+  --display-medium: var(--fw-extra) var(--fs-display-md) / 130% var(--ff-sora);
+  --display-small: var(--fw-bold) var(--fs-display-sm) / 130% var(--ff-sora);
+
+  --overline: var(--fw-bold) var(--fs-overline) / 150% var(--ff-roboto-mono);
+
+  --pg-lg: var(--fw-medium) var(--fs-pg-lg) / 150% var(--ff-roboto-flex);
+  --pg-md: var(--fw-medium) var(--fs-pg-md) / 150% var(--ff-roboto-flex);
+  --pg-sm: var(--fw-medium) var(--fs-pg-sm) / 150% var(--ff-roboto-flex);
+  --label-md: var(--fw-bold) var(--fs-label-md) / 150% var(--ff-roboto-flex);
+  --label-sm: var(--fw-bold) var(--fs-label-sm) / 150% var(--ff-roboto-flex);
+}
