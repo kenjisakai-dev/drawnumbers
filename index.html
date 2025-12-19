@@ -9,11 +9,117 @@
     <title>Sorteador de Número</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <img src="assets/icons/logo.svg" alt="logomarca" />
+        <span class="txt-logo">NUMBERS</span>
+      </header>
+
+      <main>
+        <div class="content">
+          <span class="txt-overline">ONLINE - GRATUITO</span>
+          <h1>SORTEADOR DE NÚMEROS</h1>
+
+          <div class="question-content">
+            <div id="question">
+              <span class="txt-question">
+                <img src="assets/icons/question.svg" alt="ícone de pergunta" />
+                Como funciona o sorteador de números?
+              </span>
+              <span class="txt-response">
+                O sorteador utiliza um algoritmo de geração aleatória para criar
+                números dentro do intervalo especificado pelo usuário.
+              </span>
+            </div>
+
+            <div id="question">
+              <span class="txt-question">
+                <img src="assets/icons/question.svg" alt="ícone de pergunta" />
+                Posso escolher o intervalo dos números?
+              </span>
+              <span class="txt-response">
+                Sim, você pode definir os valores mínimo e máximo para o
+                intervalo dos números sorteados.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-form">
+          <span>QUERO SORTEAR</span>
+          <p>
+            defina o intervalo e a quantidade de números, clique em "Sortear" e
+            veja os resultados na tela. É rápido e fácil!
+          </p>
+
+          <form>
+            <div class="number-form">
+              <div class="form-field">
+                <label for="number-draw">NÚMEROS</label>
+                <div class="input-wrapper">
+                  <input
+                    id="number-draw"
+                    type="number"
+                    min="1"
+                    max="5"
+                    step="1"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="number-initial">DE</label>
+                <div class="input-wrapper">
+                  <input
+                    id="number-initial"
+                    type="number"
+                    min="1"
+                    max="998"
+                    step="1"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="number-final">A</label>
+                <div class="input-wrapper">
+                  <input
+                    id="number-final"
+                    type="number"
+                    min="2"
+                    max="999"
+                    step="1"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <div class="checkbox-inner">
+                <input type="checkbox" />
+                <span></span>
+              </div>
+
+              <span>Não repetir número</span>
+            </div>
+
+            <button type="submit">
+              SORTEAR
+              <img src="assets/icons/arrow-right.svg" alt="ícone de seta" />
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

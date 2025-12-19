@@ -47,6 +47,7 @@
   --ff-sora: "Sora", sans-serif;
   --ff-roboto-mono: "Roboto Mono", monospace;
   --ff-roboto-flex: "Roboto Flex", sans-serif;
+  --ff-inter: "Inter", sans-serif;
 
   --fw-extra: 800;
   --fw-bold: 700;
@@ -76,4 +77,29 @@
   --pg-sm: var(--fw-medium) var(--fs-pg-sm) / 150% var(--ff-roboto-flex);
   --label-md: var(--fw-bold) var(--fs-label-md) / 150% var(--ff-roboto-flex);
   --label-sm: var(--fw-bold) var(--fs-label-sm) / 150% var(--ff-roboto-flex);
+
+  --logo: var(--fw-extra) 1.5rem / 130% var(--ff-sora);
+
+  --px-md: 7.5rem;
+
+  --py-md: 4.75rem;
+  --py-lg: 9.562rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background: var(--background-primary) url("../assets/images/background.png")
+    no-repeat center/cover;
+}
+
+h1 {
+  font: var(--display-lg);
+  background: var(--content-primary);
+  background-clip: text;
+  webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: -0.04em;
 }

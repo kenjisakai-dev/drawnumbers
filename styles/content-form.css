@@ -1,0 +1,121 @@
+.content-form {
+  max-width: 30.125rem;
+  margin-block: 2.125rem;
+
+  & span {
+    font: var(--label-md);
+    color: var(--content-primary);
+    margin-bottom: 0.125rem;
+  }
+
+  & p {
+    font: var(--pg-lg);
+    color: var(--content-secondary);
+    margin-block: 0.125rem 2.5rem;
+  }
+
+  & .number-form {
+    display: flex;
+    gap: 0.75rem;
+
+    & .form-field {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      & label {
+        font: var(--label-sm);
+        color: var(--content-secondary);
+      }
+
+      & input[type="number"] {
+        padding: 0.25rem 0.5rem;
+        background-color: var(--background-secondary);
+        border: none;
+        border-radius: 0.5rem;
+        outline: none;
+        font: var(--display-small);
+        line-height: 150%;
+        color: var(--content-primary);
+        width: 5.375rem;
+        text-align: center;
+
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  & .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-block: 1.25rem 2.5rem;
+
+    & .checkbox-inner {
+      width: 1.875rem;
+      height: 1.25rem;
+      background: var(--gradient-background);
+      border-radius: 1rem;
+
+      position: relative;
+
+      & input[type="checkbox"] {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      & span {
+        display: inline-block;
+        width: 0.875rem;
+        height: 0.875rem;
+        border-radius: 50%;
+        background: var(--content-primary);
+
+        position: absolute;
+        top: 50%;
+        left: 0.187rem;
+        transform: translateY(-50%);
+      }
+
+      & input[type="checkbox"]:checked + span {
+        left: initial;
+        right: 0.187rem;
+      }
+    }
+
+    & > span {
+      font: var(--fw-regular) 0.75rem / 150% var(--ff-inter);
+      color: var(--content-primary);
+      margin-block: 0.062rem;
+    }
+  }
+
+  & button {
+    width: 100%;
+    background-color: var(--background-tertiary);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding-block: 1rem;
+
+    font: var(--label-sm);
+    color: var(--content-primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
