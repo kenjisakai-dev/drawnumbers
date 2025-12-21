@@ -1,4 +1,6 @@
-* {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,6 +32,19 @@
     var(--accent-red) 32.15%,
     var(--accent-pink) 65.79%,
     var(--accent-blue) 84.58%
+  );
+
+  --gradient-border-after: linear-gradient(
+    to right,
+    var(--accent-green) 0%,
+    var(--accent-green) 45%,
+
+    var(--accent-lime) 45.5%,
+    var(--accent-red) 46.5%,
+    var(--accent-pink) 47.5%,
+
+    var(--accent-blue) 55%,
+    var(--accent-blue) 100%
   );
 
   --gradient-background: linear-gradient(

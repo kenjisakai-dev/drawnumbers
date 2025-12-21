@@ -1,0 +1,37 @@
+.content-form .number-form .form-field {
+  & .input-wrapper {
+    & .fake-caret {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: var(--content-primary);
+
+      width: 0.125rem;
+      height: 1.812rem;
+      opacity: 0;
+      border-radius: 1rem;
+      pointer-events: none;
+    }
+
+    &:focus-within .fake-caret {
+      opacity: 1;
+      animation: blink 1.2s step-end infinite;
+    }
+  }
+
+  &:focus-within input {
+    padding-left: 0.25rem;
+  }
+
+  & input:not(:hover) {
+    transition: padding-left 1s;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
