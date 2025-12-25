@@ -68,8 +68,7 @@
                     id="number-draw"
                     type="text"
                     inputmode="numeric"
-                    pattern="[0-9]*"
-                    maxlength="3"
+                    maxlength="1"
                     required
                   />
                   <span class="fake-caret"></span>
@@ -83,8 +82,7 @@
                     id="number-initial"
                     type="text"
                     inputmode="numeric"
-                    pattern="[0-9]*"
-                    maxlength="3"
+                    maxlength="1"
                     required
                   />
                   <span class="fake-caret"></span>
@@ -98,8 +96,7 @@
                     id="number-final"
                     type="text"
                     inputmode="numeric"
-                    pattern="[0-9]*"
-                    maxlength="3"
+                    maxlength="2"
                     required
                   />
                   <span class="fake-caret"></span>
@@ -109,7 +106,7 @@
 
             <div class="checkbox-wrapper">
               <div class="checkbox-inner">
-                <input type="checkbox" />
+                <input id="number-repeat" type="checkbox" />
                 <span></span>
               </div>
 
@@ -124,10 +121,35 @@
             </div>
           </form>
         </div>
+
+        <div class="content-sortition hidden">
+          <header>
+            <span class="txt-label-md">RESULTADO DO SORTEIO</span>
+            <span class="txt-overline">1° RESULTADO</span>
+          </header>
+
+          <div class="result-sortition">
+            <!-- <div class="result-number">
+              <div class="result-number-animation"></div>
+              <div class="txt-result-number">25</div>
+            </div> -->
+          </div>
+
+          <div id="draw-again" class="button-wrapper hidden">
+            <button>
+              SORTEAR NOVAMENTE
+              <img
+                src="assets/icons/again.svg"
+                alt="ícone de sortear novamente"
+              />
+            </button>
+          </div>
+        </div>
       </main>
     </div>
 
     <script src="caret-input.js"></script>
     <script src="animation-button.js"></script>
+    <script src="sortition.js"></script>
   </body>
 </html>

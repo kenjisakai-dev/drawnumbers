@@ -5,3 +5,7 @@
 
   margin-block: var(--py-md) var(--py-lg);
 }
+
+.hidden {
+  display: none;
+}

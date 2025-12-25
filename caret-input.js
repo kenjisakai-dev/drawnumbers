@@ -24,7 +24,6 @@ inputs.forEach((input) => {
 
     const usableWidth = input.clientWidth - paddingLeft - paddingRight;
 
-    // campo vazio → caret no centro
     if (!input.value) {
       caret.style.left = `${input.clientWidth / 2}px`;
       return;
@@ -38,6 +37,11 @@ inputs.forEach((input) => {
     }px`;
   }
 
+  function isOnlyNumber(value) {
+    const regex = /\D/;
+    return !regex.test(value);
+  }
+
   // ======= TRAVAS DE INTERAÇÃO =======
 
   // foco
@@ -48,8 +52,10 @@ inputs.forEach((input) => {
 
   // digitação
   input.addEventListener("input", () => {
-    forceCursorToEnd();
-    updateCaret();
+    if (isOnlyNumber(input.value)) {
+      forceCursorToEnd();
+      updateCaret();
+    }
   });
 
   // clique do mouse
