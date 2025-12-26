@@ -1,41 +1,11 @@
 .content {
   max-width: 32rem;
 
-  & span.txt-overline {
-    display: inline-block;
-    background: var(--gradient-content);
-    background-clip: text;
-    webkit-background-clip: text;
-    color: transparent;
-    font: var(--overline);
-    margin-bottom: 0.75rem;
-  }
-
   & .question-content {
     display: flex;
     flex-direction: column;
     gap: 2.25rem;
     margin-top: 2.375rem;
     max-width: 24.125rem;
-
-    & .question {
-      display: flex;
-    }
-
-    & .txt-question {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-
-      font: var(--pg-md);
-      color: var(--content-brand);
-    }
-
-    & .txt-response {
-      display: inline-block;
-      font: var(--pg-sm);
-      color: var(--content-secondary);
-      padding-left: 1.75rem;
-    }
   }
 }

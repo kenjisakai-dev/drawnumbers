@@ -7,6 +7,7 @@
 }
 
 :root {
+  /* colors */
   --content-primary: #ffffff;
   --content-secondary: #c7c9cc;
   --content-tertiary: #d9d9d9;
@@ -59,6 +60,7 @@
     var(--background-gray) 100%
   );
 
+  /* fonts */
   --ff-sora: "Sora", sans-serif;
   --ff-roboto-mono: "Roboto Mono", monospace;
   --ff-roboto-flex: "Roboto Flex", sans-serif;
@@ -95,6 +97,7 @@
 
   --logo: var(--fw-extra) 1.5rem / 130% var(--ff-sora);
 
+  /* paddings */
   --px-md: 7.5rem;
 
   --py-md: 4.75rem;
@@ -106,15 +109,9 @@ body {
   height: 100vh;
   overflow: hidden;
 
-  background: var(--background-primary) url("../assets/images/background.png")
-    no-repeat center/cover;
-}
-
-h1 {
-  font: var(--display-lg);
-  background: var(--content-primary);
-  background-clip: text;
-  webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: -0.04em;
+  background-color: var(--background-primary);
+  background-image: url("../assets/images/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

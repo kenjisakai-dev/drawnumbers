@@ -7,16 +7,6 @@
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
-
-    & span.txt-label-md {
-      font: var(--label-md);
-      color: var(--content-primary);
-    }
-
-    & span.txt-overline {
-      font: var(--overline);
-      color: var(--content-secondary);
-    }
   }
 
   & .result-sortition {
@@ -33,8 +23,6 @@
 
       padding-block: 0.5rem;
       position: relative;
-
-      flex-shrink: 0;
     }
 
     & .result-number-animation {
@@ -50,7 +38,6 @@
       justify-content: center;
       align-items: center;
 
-      font: var(--fw-bold) 3rem / 150% var(--ff-roboto-mono);
       position: absolute;
     }
   }

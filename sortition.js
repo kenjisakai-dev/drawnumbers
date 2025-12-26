@@ -13,7 +13,7 @@ const drawAgain = document.getElementById("draw-again");
 const btnDrawAgain = document.querySelector("#draw-again button");
 
 const txtOverlineContentSortition = document.querySelector(
-  ".content-sortition header .txt-overline"
+  ".content-sortition header .txt-overline-result"
 );
 
 form.addEventListener("input", (event) => {
@@ -37,9 +37,9 @@ form.addEventListener("submit", (event) => {
   const drawValue = Number(drawElement.value);
   const initialValue = Number(initialElement.value);
   const finalValue = Number(finalElement.value);
-  const repeatNumbers = repeatElement.checked;
+  const noRepeatNumbers = repeatElement.checked;
 
-  if (!verifyForm(drawValue, initialValue, finalValue, repeatNumbers)) {
+  if (!verifyForm(drawValue, initialValue, finalValue, noRepeatNumbers)) {
     form.reportValidity();
     return;
   }
@@ -53,18 +53,18 @@ form.addEventListener("submit", (event) => {
     drawValue,
     initialValue,
     finalValue,
-    repeatNumbers
+    noRepeatNumbers
   );
 
   playDraw(drawNumbers);
 });
 
-function verifyForm(drawValue, initialValue, finalValue, repeatNumbers) {
+function verifyForm(drawValue, initialValue, finalValue, noRepeatNumbers) {
   drawElement.setCustomValidity("");
   initialElement.setCustomValidity("");
   finalElement.setCustomValidity("");
 
-  const interval = finalValue - initialValue;
+  const interval = finalValue - initialValue + 1;
 
   if (drawValue < 1 || drawValue > 5) {
     drawElement.setCustomValidity(
@@ -87,16 +87,16 @@ function verifyForm(drawValue, initialValue, finalValue, repeatNumbers) {
     return false;
   }
 
-  if (!repeatNumbers && initialValue >= finalValue) {
+  if (initialValue >= finalValue) {
     finalElement.setCustomValidity(
       "Digite um número final maior que o valor inicial!"
     );
     return false;
   }
 
-  if (repeatNumbers && drawValue > interval + 1) {
+  if (noRepeatNumbers && interval < drawValue) {
     finalElement.setCustomValidity(
-      "Digite um número final maior que a quantidade de números a ser sorteados!"
+      "Digite um intervalo maior que a quantidade de números a ser sorteados!"
     );
     return false;
   }
@@ -110,7 +110,12 @@ function clearInputsForm() {
   finalElement.value = "";
 }
 
-function sortitionNumbers(drawValue, initialValue, finalValue, repeatNumbers) {
+function sortitionNumbers(
+  drawValue,
+  initialValue,
+  finalValue,
+  noRepeatNumbers
+) {
   const drawNumbers = [];
 
   let i = 0;
@@ -120,7 +125,7 @@ function sortitionNumbers(drawValue, initialValue, finalValue, repeatNumbers) {
       Math.random() * (finalValue - initialValue + 1) + initialValue
     );
 
-    if (repeatNumbers || !drawNumbers.includes(random)) {
+    if (!noRepeatNumbers || !drawNumbers.includes(random)) {
       drawNumbers.push(random);
       i++;
     }

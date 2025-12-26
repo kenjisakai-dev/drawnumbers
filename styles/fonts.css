@@ -1,0 +1,89 @@
+.txt-logo {
+  font: var(--logo);
+  color: var(--content-primary);
+
+  margin-block: 0.218rem;
+  letter-spacing: -0.04em;
+}
+
+.txt-overline {
+  font: var(--overline);
+
+  background: var(--gradient-content);
+  background-clip: text;
+  webkit-background-clip: text;
+  color: transparent;
+}
+
+h1 {
+  font: var(--display-lg);
+  color: var(--content-primary);
+  letter-spacing: -0.04em;
+}
+
+.txt-question {
+  font: var(--pg-md);
+  color: var(--content-brand);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.txt-response {
+  font: var(--pg-sm);
+  color: var(--content-secondary);
+
+  display: inline-block;
+  padding-left: 1.75rem;
+}
+
+.txt-content-form {
+  font: var(--label-md);
+  color: var(--content-primary);
+  margin-bottom: 0.125rem;
+}
+
+.txt-description-content-form {
+  font: var(--pg-lg);
+  color: var(--content-secondary);
+  margin-block: 0.125rem 2.5rem;
+}
+
+label {
+  font: var(--label-sm);
+  color: var(--content-secondary);
+  cursor: pointer;
+  transition: color 250ms ease;
+}
+
+input[type="text"] {
+  font: var(--display-small);
+  line-height: 150%;
+  color: var(--content-primary);
+}
+
+.checkbox-wrapper span {
+  font: var(--fw-regular) 0.75rem / 150% var(--ff-inter);
+  color: var(--content-primary);
+  margin-block: 0.062rem;
+}
+
+button {
+  font: var(--label-sm);
+  color: var(--content-primary);
+}
+
+.txt-label-md {
+  font: var(--label-md);
+  color: var(--content-primary);
+}
+
+.txt-overline-result {
+  font: var(--overline);
+  color: var(--content-secondary);
+}
+
+.txt-result-number {
+  font: var(--fw-bold) 3rem / 150% var(--ff-roboto-mono);
+}

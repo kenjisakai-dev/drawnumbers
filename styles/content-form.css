@@ -2,18 +2,6 @@
   max-width: 30.125rem;
   margin-block: 2.125rem;
 
-  & span {
-    font: var(--label-md);
-    color: var(--content-primary);
-    margin-bottom: 0.125rem;
-  }
-
-  & p {
-    font: var(--pg-lg);
-    color: var(--content-secondary);
-    margin-block: 0.125rem 2.5rem;
-  }
-
   & .number-form {
     display: flex;
     gap: 0.75rem;

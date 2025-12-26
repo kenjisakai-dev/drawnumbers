@@ -43,12 +43,6 @@
       animation: fadeOut 1.5s forwards;
     }
   }
-
-  & > span {
-    font: var(--fw-regular) 0.75rem / 150% var(--ff-inter);
-    color: var(--content-primary);
-    margin-block: 0.062rem;
-  }
 }
 
 @keyframes fadeIn {

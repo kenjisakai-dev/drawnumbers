@@ -3,11 +3,4 @@
   align-items: center;
   gap: 0.687rem;
   margin-bottom: 5.562rem;
-
-  & span.txt-logo {
-    font: var(--logo);
-    color: var(--content-primary);
-    margin-block: 0.218rem;
-    letter-spacing: -0.04em;
-  }
 }

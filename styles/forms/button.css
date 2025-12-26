@@ -27,9 +27,8 @@
   &.is-animating {
     &::before {
       opacity: 1;
-      transition: transform 0s 1.6s;
+      transition: transform 0s 1.6s, inset 150ms;
       transform: scaleX(var(--before-gradient, 1));
-      transition: inset 150ms;
     }
 
     &::after {
@@ -54,8 +53,6 @@
     border-radius: 0.5rem;
     cursor: pointer;
 
-    font: var(--label-sm);
-    color: var(--content-primary);
     background-color: var(--background-tertiary);
   }
 }
