@@ -43,7 +43,7 @@
   }
 
   @media (width < 1280px) {
-    width: 19.875rem;
+    width: 100%;
     transform: translateY(0rem);
     height: 18.375rem;
     margin-block: 4.437rem 4.312rem;
