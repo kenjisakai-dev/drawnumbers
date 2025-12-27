@@ -14,10 +14,6 @@
   flex-direction: row;
 }
 
-.desktop {
-  display: initial;
-}
-
 @media (width < 1280px) {
   .container {
     --max-width: 390px;
@@ -27,9 +23,5 @@
 
   .even-column {
     flex-direction: column;
-  }
-
-  .desktop {
-    display: none;
   }
 }

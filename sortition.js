@@ -178,7 +178,7 @@ async function playDraw(drawNumbers) {
 
   drawAgain.classList.add("visible");
 
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 1280) {
     contentSortition.style.transition = "transform 1s";
     contentSortition.style.transform = "translateY(3.687rem)";
   }
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
   contentSortition.classList.add("hidden");
   drawAgain.classList.remove("visible");
 
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 1280) {
     contentSortition.style.transform = "translateY(6.687rem)";
   }
 
