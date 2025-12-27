@@ -70,11 +70,20 @@ function verifyForm(drawValue, initialValue, finalValue, noRepeatNumbers) {
 
   const interval = finalValue - initialValue + 1;
 
-  if (drawValue < 1 || drawValue > 4) {
-    drawElement.setCustomValidity(
-      "Digite a quantidade entre 1 a 4 de números a ser sorteados!"
-    );
-    return false;
+  if (window.innerWidth >= 1280) {
+    if (drawValue < 1 || drawValue > 5) {
+      drawElement.setCustomValidity(
+        "Digite a quantidade entre 1 a 5 de números a ser sorteados!"
+      );
+      return false;
+    }
+  } else {
+    if (drawValue < 1 || drawValue > 3) {
+      drawElement.setCustomValidity(
+        "Digite a quantidade entre 1 a 3 de números a ser sorteados!"
+      );
+      return false;
+    }
   }
 
   if (initialValue < 1 || initialValue > 98) {
