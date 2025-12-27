@@ -9,3 +9,27 @@
 .hidden {
   display: none;
 }
+
+.even-column {
+  flex-direction: row;
+}
+
+.desktop {
+  display: initial;
+}
+
+@media (width < 1280px) {
+  .container {
+    --max-width: 390px;
+
+    margin-block: var(--py-md) 0rem;
+  }
+
+  .even-column {
+    flex-direction: column;
+  }
+
+  .desktop {
+    display: none;
+  }
+}

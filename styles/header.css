@@ -3,4 +3,9 @@
   align-items: center;
   gap: 0.687rem;
   margin-bottom: 5.562rem;
+
+  @media (width < 1280px) {
+    justify-content: center;
+    margin-bottom: 2.875rem;
+  }
 }

@@ -6,4 +6,8 @@
     display: flex;
     gap: 0.75rem;
   }
+
+  @media (width < 1280px) {
+    margin-block: 2.625rem 5rem;
+  }
 }

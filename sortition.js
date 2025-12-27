@@ -16,6 +16,10 @@ const txtOverlineContentSortition = document.querySelector(
   ".content-sortition header .txt-overline-result"
 );
 
+const questionContentMobile = document.querySelector(
+  ".question-content.mobile"
+);
+
 form.addEventListener("input", (event) => {
   if (event.target.tagName !== "INPUT") return;
 
@@ -66,9 +70,9 @@ function verifyForm(drawValue, initialValue, finalValue, noRepeatNumbers) {
 
   const interval = finalValue - initialValue + 1;
 
-  if (drawValue < 1 || drawValue > 5) {
+  if (drawValue < 1 || drawValue > 4) {
     drawElement.setCustomValidity(
-      "Digite a quantidade entre 1 a 5 de números a ser sorteados!"
+      "Digite a quantidade entre 1 a 4 de números a ser sorteados!"
     );
     return false;
   }
@@ -152,6 +156,10 @@ function createElementDrawNumber(drawNumber) {
 }
 
 async function playDraw(drawNumbers) {
+  if (window.innerWidth < 1280) {
+    questionContentMobile.style.marginBottom = "5.687rem";
+  }
+
   for (const [index, number] of drawNumbers.entries()) {
     txtOverlineContentSortition.textContent = `${index + 1}° RESULTADO`;
     const elementResultNumbers = createElementDrawNumber(number);
@@ -159,9 +167,12 @@ async function playDraw(drawNumbers) {
     smoothCenterReflow();
   }
 
-  drawAgain.classList.remove("hidden");
-  contentSortition.style.transition = "transform 1s";
-  contentSortition.style.transform = "translateY(3.687rem)";
+  drawAgain.classList.add("visible");
+
+  if (window.innerWidth >= 768) {
+    contentSortition.style.transition = "transform 1s";
+    contentSortition.style.transform = "translateY(3.687rem)";
+  }
 }
 
 function animationDrawNumber(el) {
@@ -189,7 +200,7 @@ btnDrawAgain.addEventListener("click", (event) => {
 
   contentForm.classList.remove("hidden");
   contentSortition.classList.add("hidden");
-  drawAgain.classList.add("hidden");
+  drawAgain.classList.remove("visible");
   contentSortition.style.transform = "";
 });
 
@@ -198,10 +209,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   contentForm.classList.remove("hidden");
   contentSortition.classList.add("hidden");
+  drawAgain.classList.remove("visible");
 
-  drawAgain.classList.add("hidden");
-
-  contentSortition.style.transform = "translateY(6.687rem)";
+  if (window.innerWidth >= 768) {
+    contentSortition.style.transform = "translateY(6.687rem)";
+  }
 
   drawElement.value = "";
   initialElement.value = "";

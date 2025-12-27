@@ -41,6 +41,13 @@
       position: absolute;
     }
   }
+
+  @media (width < 1280px) {
+    width: 19.875rem;
+    transform: translateY(0rem);
+    height: 18.375rem;
+    margin-block: 4.437rem 4.312rem;
+  }
 }
 
 @keyframes slideDrawNumber {

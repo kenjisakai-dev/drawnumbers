@@ -115,3 +115,16 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+@media (width < 1280px) {
+  :root {
+    --px-md: 2.25rem;
+
+    --py-md: 2.75rem;
+    --py-lg: 2.75rem;
+  }
+
+  body {
+    overflow-y: auto;
+  }
+}

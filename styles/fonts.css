@@ -19,6 +19,7 @@ h1 {
   font: var(--display-lg);
   color: var(--content-primary);
   letter-spacing: -0.04em;
+  margin-top: 0.75rem;
 }
 
 .txt-question {
@@ -63,7 +64,7 @@ input[type="text"] {
   color: var(--content-primary);
 }
 
-.checkbox-wrapper span {
+.checkbox-wrapper > span {
   font: var(--fw-regular) 0.75rem / 150% var(--ff-inter);
   color: var(--content-primary);
   margin-block: 0.062rem;
@@ -86,4 +87,15 @@ button {
 
 .txt-result-number {
   font: var(--fw-bold) 3rem / 150% var(--ff-roboto-mono);
+}
+
+@media (width < 1280px) {
+  h1 {
+    font: var(--display-medium);
+    margin-top: 0.5rem;
+  }
+
+  .txt-description-content-form {
+    font: var(--pg-md);
+  }
 }

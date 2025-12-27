@@ -1,11 +1,34 @@
 .content {
   max-width: 32rem;
+}
 
-  & .question-content {
+.question-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin-top: 2.375rem;
+  max-width: 24.125rem;
+}
+
+.question-content.desktop {
+  display: flex;
+}
+
+.question-content.mobile {
+  display: none;
+  margin-bottom: 2.75rem;
+}
+
+@media (width < 1280px) {
+  .question-content {
+    margin-top: 0rem;
+  }
+
+  .question-content.desktop {
+    display: none;
+  }
+
+  .question-content.mobile {
     display: flex;
-    flex-direction: column;
-    gap: 2.25rem;
-    margin-top: 2.375rem;
-    max-width: 24.125rem;
   }
 }

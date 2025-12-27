@@ -57,6 +57,17 @@
   }
 }
 
+#draw-again {
+  transition: opacity 400ms;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#draw-again.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @keyframes gradientFade {
   0% {
     opacity: 0;
